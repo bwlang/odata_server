@@ -1,13 +1,7 @@
-ODataServer
+OData Server
 ===========
 
-Introduction goes here.
+This is a rails plugin/engine to embue your application with OData features (so its data can be readily consumed by 
+and OData client).
 
-
-Example
-=======
-
-Example goes here.
-
-
-Copyright (c) 2010 [name of plugin creator], released under the MIT license
+It was forked Mark Borkum's work at from http://rubyforge.org/scm/?group_id=9605 .
