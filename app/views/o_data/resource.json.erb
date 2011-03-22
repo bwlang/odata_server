@@ -1,0 +1,1 @@
+<%= if @countable then o_data_json_feed(@query, @results, :expand => @expand_navigation_property_paths).to_json else o_data_json_entry(@query, [@results].flatten.compact.first, :d => true, :expand => @expand_navigation_property_paths).to_json end %>
