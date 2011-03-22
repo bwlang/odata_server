@@ -15,8 +15,8 @@ Jeweler::Tasks.new do |gem|
   gem.name = "odata_server"
   gem.homepage = "http://github.com/bwlang/odata_server"
   gem.license = "MIT"
-  gem.summary = %Q{A simple gem to allow your rails app to serve its data in OData format}
-  gem.description = %Q{TODO: longer description of your gem}
+  gem.summary = %Q{OData server for rails}
+  gem.description = %Q{This is a gem to enable OData consumers to pull data from your rails application.}
   gem.email = "langhorst@neb.com"
   gem.authors = ["Mark Borkum", "Brad Langhorst"]
   # Include your dependencies below. Runtime dependencies are required when using your gem,
