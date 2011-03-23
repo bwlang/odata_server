@@ -18,9 +18,13 @@ module OData
       
       def self.active_record_for_to_end(reflection)
         return nil if reflection.options[:polymorphic]
-        reflection.class_name.constantize
+        begin
+            reflection.class_name.constantize
+        rescue => ex
+          raise "Failed to handle class <#{reflection.active_record}> #{reflection.macro} #{reflection.name}"
+        end
       end
-      
+
       # def self.foreign_keys_for(reflection)
       #   [reflection.options[:foreign_key] || reflection.association_foreign_key, reflection.options[:foreign_type]].compact
       # end
@@ -87,6 +91,8 @@ module OData
       end
       
       def self.to_end_options_for(schema, reflection)
+        Rails.logger.level = 0
+        Rails.logger.info("Processing #{reflection.class}")
         active_record = active_record_for_to_end(reflection)
         entity_type = schema.find_entity_type(:active_record => active_record)
         
