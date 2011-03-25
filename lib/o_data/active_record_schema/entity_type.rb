@@ -82,8 +82,8 @@ module OData
       end
       
       def self.conditions_for_find(entity_type, key_values = {})
-        return "0" unless entity_type.is_a?(OData::ActiveRecordSchema::EntityType)
-        return "1" if key_values.blank?
+        return "1=0" unless entity_type.is_a?(OData::ActiveRecordSchema::EntityType)
+        return "1=1" if key_values.blank?
         
         key_values.collect { |pair|
           property_or_str, value = pair
