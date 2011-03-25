@@ -2,6 +2,13 @@ OData Server
 ===========
 
 This is a rails plugin/engine to embue your application with OData features (so its data can be readily consumed by 
-and OData client).
+an OData client).
 
-It was forked Mark Borkum's work at from http://rubyforge.org/scm/?group_id=9605 .
+It was forked Mark Borkum's work at from http://rubyforge.org/scm/?group_id=9605 with only a few small additions
+to support postgresql and declarative authorization and released as a gem.
+
+
+
+The software iterates over your models exposing each as an OData source automatically.
+
+Beware - this code is not heavily tested, it does work in my limited tests usint Tableau public to consume data.
