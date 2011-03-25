@@ -91,8 +91,7 @@ module OData
       end
       
       def self.to_end_options_for(schema, reflection)
-        Rails.logger.level = 0
-        Rails.logger.info("Processing #{reflection.class}")
+        Rails.logger.info("Processing #{reflection.active_record}")
         active_record = active_record_for_to_end(reflection)
         entity_type = schema.find_entity_type(:active_record => active_record)
         
